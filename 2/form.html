@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City of Sedona</title>
+  <link rel="icon" href="favicon32.svg" type="image/svg+xml">
+  <base href="https://htmlacademy-adaptive.github.io/1779401-sedona-27/2/">
+</head>
+
+<body>
+  <header class="header">
+    <img src="./img/icons/logo.svg" alt="Лого" class="header__logo">
+    <div class="header__burger">
+      <!-- через псевдоэлементы -->
+    </div>
+  </header>
+  <section class="hero">
+    <!-- можно сделать через псевдоэлементы -->
+    <img src="./img/picturies/hero-text.png" alt="Заголовок" class="hero__text">
+  </section>
+  <section class="text-description">
+    <h1 class="text-description__title">
+      ОСТАВЬТЕ СВОЙ ОТЗЫВ
+    </h1>
+    <p class="text-description__subtitle">
+      ПОМОГИТЕ НАШИМ ОТЕЛЯМ СТАТЬ ЛУЧШЕ! ОСТАВЬТЕ ОТЗЫВ О НИХ, А ТАКЖЕ О ПОСЕЩЕННЫХ ВАМИ ДОСТОПРИМЕЧАТЕЛЬНОСТЯХ
+    </p>
+  </section>
+
+  <form onSubmit={onSubmit} class="form">
+    <h1 class="form__title">
+      ПРЕДСТАВЬТЕСЬ:
+    </h1>
+    <ul class="form__users-about">
+      <li class="form__user-about">
+        <label for="name" class="form__name">
+          ИМЯ*:
+          <input type="text" id="name" name="name" placeholder="Пётр" value="" class="form__input">
+        </label>
+      </li>
+      <li class="form__user-about">
+        <label for="surname" class="form__name">
+          ФАМИЛИЯ*:
+          <input type="text" id="surname" name="surname" placeholder="Пустота" value="" class="form__input">
+        </label>
+      </li>
+      <li class="form__user-about">
+        <label for="middlename" class="form__name">
+          ОТЧЕСТВО:
+          <input type="text" id="middlename" name="middlename" placeholder="Викторович" value="" class="form__input">
+        </label>
+      </li>
+    </ul>
+    <h1 class="form__title">
+      КОНТАКТНАЯ ИНФОРМАЦИЯ:
+    </h1>
+    <ul class="form__users-about">
+      <li class="form__user-about">
+        <label for="phone" class="form__name">
+          КОНТАКТНЫЙ ТЕЛЕФОН*:
+          <input type="tel" id="phone" name="phone" placeholder="Введите телефон" value="" class="form__input--contacts">
+          <img src="./img/icons/phone.svg" alt="ТЕЛЕФОН" class="form__input-logo">
+        </label>
+      </li>
+      <li class="form__user-about">
+        <label for="email" class="form__name">
+          ЭЛЕКТРОННАЯ ПОЧТА*:
+          <input type="email" id="email" name="email" placeholder="Введите e-mail" value="" class="form__input--contacts">
+          <img src="./img/icons/email.svg" alt="ПОЧТА" class="form__input-logo">
+        </label>
+      </li>
+    </ul>
+    <h1 class="form__title">
+      ВАШЕ ОБЩЕЕ ВПЕЧАТЛЕНИЕ:
+    </h1>
+    <ul class="form__impressions">
+      <li class="form__impression">
+        <label for="positive" class="form__name">
+          Скорее положительное
+          <input type="radio" id="positive" name="impression" checked class="form__input">
+        </label>
+      </li>
+      <li class="form__impression">
+        <label for="negative" class="form__name">
+          Скорее отрицательное
+          <input type="radio" id="negative" name="impression" class="form__input">
+        </label>
+      </li>
+      <li class="form__impression">
+        <label for="notknowing" class="form__name">
+          Затрудняюсь ответить
+          <input type="radio" id="notknowing" name="impression" class="form__input">
+        </label>
+      </li>
+    </ul>
+    <h1 class="form__title">
+      ПОСЕЩЕННЫЕ ДОСТОПРИМЕЧАТЕЛЬНОСТИ:
+    </h1>
+    <ul class="form__sights">
+      <li class="form__sight">
+        <label for="brige" class="form__name">
+          Мост Дьявола
+          <input type="checkbox" id="brige" name="sights" checked class="form__input">
+        </label>
+      </li>
+      <li class="form__sight">
+        <label for="mountain" class="form__name">
+          Гора-Колокол
+          <input type="checkbox" id="mountain" name="sights" checked class="form__input">
+        </label>
+      </li>
+      <li class="form__sight">
+        <label for="slide" class="form__name">
+          Слайд-парк
+          <input type="checkbox" id="slide" name="sights" checked class="form__input">
+        </label>
+      </li>
+      <li class="form__sight">
+        <label for="red-rocks" class="form__name">
+          Красные скалы
+          <input type="checkbox" id="red-rocks" name="sights" class="form__input">
+        </label>
+      </li>
+    </ul>
+    <h1 class="form__title">
+      ОПИШИТЕ СВОИ ЭМОЦИИ:
+    </h1>
+    <textarea class="form__emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+    <button class="button">
+      ОТПРАВИТЬ ОТЗЫВ
+    </button>
+    <p class="footnote">
+      * — ОБЯЗАТЕЛЬНЫЕ ПОЛЯ
+    </p>
+  </form>
+  <footer class="footer">
+    <p class="footer__hash">
+      #VISITSEDONA
+    </p>
+    <ul class="footer__social-list">
+      <li class="footer__social-item">
+        <img class="footer__social-logo" src="./img/icons/VK.svg" alt="ВК">
+      </li>
+      <li class="footer__social-item">
+        <img class="footer__social-logo" src="./img/icons/TG.svg" alt="ТГ">
+      </li>
+      <li class="footer__social-item">
+        <img class="footer__social-logo" src="./img/icons/YB.svg" alt="ЮБ">
+      </li>
+    </ul>
+    <div class="footer__madeby">
+      <p class="footer__madeby-text">РАЗРАБОТАНО</p>
+      <img class="footer__madeby-logo" src="./img/icons/htmlacademy.svg" alt="Лого">
+    </div>
+  </footer>
+</body>
+</html>
